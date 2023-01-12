@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+font-family: 'Android';
+src: url('../fontes/idroid.otf') format('opentype');
+font-weight: normal;
+}
+:root{
+--cor0:#c5ebd6;
+--cor1:#83e1ad;
+--cor2:#3ddc84;
+--cor3:#154d2b;
+--cor4:#06381b;
+--corBranco: #ffffffd7;
+--fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+--fonte-destaque: 'Poppins', sans-serif;
+--fonte-secundaria: 'Android', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+header{
+margin-top: 1px;
+text-align: center;
+background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
+padding: 5px;
+min-height: 150px; 
+}
+
+header h1{
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    transition: color 1s;
+    max-width: 700px;
+    display: inline-block;
+    transition: 1s;
+    text-shadow: 0px 0px 10px black;
+}
+header h1:hover{
+    color: rgb(0, 255, 255);
+    transform: scale(1.04);
+}
+h1{
+    color: var(--cor4);
+    font-family: var(--fonte-secundaria);
+}
+
+header p{
+    font-family: var(--fonte-padrao);
+    color: white;
+    font-size: 1.5em;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.4s;
+    display: inline-block;
+}
+header p:hover{
+    transform: scale(1.03);
+}
+nav{
+    background-color: #3ddc85ce;
+    text-align: right;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.233);
+    
+}
+nav a {
+    
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+nav a:last-child{
+
+    border-radius: 0px 0px 15px 0px;
+}
+nav a:hover{
+    animation: piscaPisca2 12s infinite;
+    
+    background-color:#38b36f;
+    
+    
+}
+main{
+    margin: 3px auto 30px auto;
+    min-width: 220px;
+    max-width: 1330px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+    border-radius: 0px 0px 10px 10px;
+}
+main h2{
+    color: var(--cor3);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    max-width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.11);
+    padding: 5px;
+
+}
+main img{
+    width: 100%;
+}
+main img.pequena{
+    display: block;
+    margin: auto;
+    max-width: 350px;
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.05em;
+    line-height: 1.5em;
+}
+ main strong{
+    font-size: 1.05em;
+    color: var(--cor3);
+    font-weight: bold;
+   
+ }
+ main a{
+    color: var(--cor4);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--cor0);
+    padding: 2px 6px;
+ }
+main a:hover{
+    text-decoration: underline;
+    font-size: 18px;
+}
+a.externo::after{ 
+    content: '\00A0\1F517';
+}
+
+aside{
+    background-color: var(--cor1) ;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0'; /*Não é compatível com todo navegador*/
+    list-style-position: inside;
+    columns: 2;
+}
+aside h3{
+    color: rgb(253, 253, 253);
+    text-align: left;
+    font-size: 20px;
+    background-image: linear-gradient(to right, var(--cor3) ,transparent);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside abbr{
+    text-decoration: none;
+}
+aside li{
+    transition: 0.4s;
+}
+aside li:hover{
+    font-size: 20px;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor2);
+    color: white;
+}
+footer span{
+    transition: 1s;
+}
+footer span:hover{
+    font-size: 18px;
+    font-weight: bolder;
+}
+footer span:active{
+    animation: piscaPisca 3s infinite;
+}
+footer p{
+    font-size: 15px;
+}
+footer a{
+    color: var(--cor4);
+    font-weight: bold;
+    text-decoration: none;
+    transition: text-decoration;
+}
+footer a:hover{
+    text-decoration: underline;
+    
+}
+@keyframes piscaPisca{
+    0%{color: aqua;}
+    10%{color: aqua;}
+    15%{color: #380fee;}
+    20%{color: #380fee;}
+    25%{color: aqua;}
+    30%{color: aqua;}
+    35%{color: #380fee;}
+    40%{color: #380fee;}
+    45%{color: aqua;}
+    50%{color: aqua;}
+    55%{color: #380fee;}
+    60%{color: #380fee;}
+    65%{color: aqua;}
+    70%{color: aqua;}
+    75%{color: #380fee;}
+    80%{color: #380fee;}
+    85%{color: aqua;}
+    90%{color: aqua;}
+    95%{color: #380fee;}
+    100%{color: aqua;}
+}
+@keyframes piscaPisca2{
+    0%{color: var(--corBranco);}
+    10%{color: #000000c5;;}
+    15%{color: var(--corBranco);}
+    20%{color: var(--corBranco);}
+    25%{color: #000000c5;}
+    30%{color: #000000c5;}
+    35%{color: var(--corBranco);}
+    40%{color: var(--corBranco);}
+    45%{color: #000000c5;}
+    50%{color: #000000c5;}
+    55%{color: var(--corBranco);}
+    60%{color: var(--corBranco);}
+    65%{color: #000000c5;}
+    70%{color: #000000c5;}
+    75%{color: var(--corBranco);}
+    80%{color: var(--corBranco);}
+    85%{color: #000000c5;}
+    90%{color: #000000c5;}
+    95%{color: var(--corBranco);}
+    100%{color: #000000c5;}
+}
+.zoom{
+    transition: 1s;
+}
+.zoom:hover{
+    transform: scale(1.03);
+}    
